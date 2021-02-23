@@ -17,7 +17,9 @@ def consolidate_cart(cart)
   thing_hash = {}
   cart.each do |item_properties|
     if thing_hash.keys.include?(item_properties[:item])
-      
+      thing_hash[item_properties[:item]] = thing_hash[item_properties[:item]] + 1
+    else
+      thing_hash[item_properties[:item]] = item_properties
     end
 end
 
