@@ -21,5 +21,6 @@ def consolidate_cart(cart)
     else
       thing_hash[item_properties[:item]] = item_properties
       thing_hash[item_properties[:item]][:count] = 1
+    end
   new_thing = thing_hash.values
 end
